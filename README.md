@@ -26,8 +26,8 @@ Common input/output locations expected by the scripts:
 - `cellchat/` – CellChat outputs organised per analysis (`cellchat/custom/...` subfolders).
 - `infercnv/` – inferCNV intermediate files and results.
 
-> **Important:** Several scripts still reference absolute paths from the development workstation (e.g. `/home/iphd2/Desktop/...`). Replace those with the corresponding locations on your system before running the pipeline. Keeping a central configuration snippet (e.g. using `base_dir <- "..."`) at the top of each script can help.
-> **Quick check:** search for `/home/iphd2/Desktop/SNSCC_HC_multiome_2024` in the scripts and update to your own base directory.
+> **Before you run anything:** Update the hard-coded paths. The scripts still have absolute paths from the original machine (e.g. `/home/iphd2/Desktop/...`). Define a `base_dir <- "/your/data/path"` near the top and swap hard-coded strings to `file.path(base_dir, "...")`.
+> **Quick check:** run a search for `/home/iphd2/Desktop/SNSCC_HC_multiome_2024` in the scripts and replace it with your own base directory.
 
 ## Prerequisites
 
